@@ -1,0 +1,355 @@
+<!--
+
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Create Products!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Here are all products</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:if="${products.isEmpty()}">
+    <td colspan="2">No Products Available</td>
+  </tr>
+  <tr th:each="product : ${products}">
+    <td><span th:text="${product.name}">Name</span></td>
+    <td><span th:text="${product.price}">Price</span></td>
+  </tr>
+  </tbody>
+</table>
+<a href="/createproduct">Create more products</a>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.82.0">
+  <title>PriceCart</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 20%;
+      alignment: top;
+
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      max-width: 100px;
+    }
+
+    /*main {
+      background-image: url("bilder/notebook.png");
+      background-size: 1500px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }*/
+
+    /*
+    main {
+      background-image: url("bilder/plant.png");
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      alignment: top;
+
+
+    }
+
+     */
+
+    main {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100vw;
+      height: 170vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 1259px) {
+      main {
+        background-image: url("bilder/test3.jpg");
+      }
+    }
+
+    @media (min-width:1260px) {
+      main {
+        background-image: url("bilder/test3.jpg");
+      }
+    }
+
+
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/carousel.css" rel="stylesheet">
+
+</head>
+</head>
+
+
+
+
+
+
+<body>
+
+
+
+
+<!--<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/app">Meine Einkaufsliste</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/signin">Anmelden</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/register">Registrieren</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>-->
+
+
+
+<header>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse" sec:authorize="!isAuthenticated()">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Anmelden</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/createproduct">Produkt hinzufügen</a>
+          </li>
+
+        </ul>
+
+        <form class="d-flex" method="POST" action="#" th:action="@{/logout}">
+          <button class="btn btn-outline-danger" type="submit">Logout</button>
+        </form>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+
+
+
+
+
+</header>
+
+
+<main>
+
+
+
+
+
+  <center>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>Deine Liste</h2>
+
+    <br>
+    <br>
+
+    <div id="app">
+    <table>
+      <thead>
+      <tr>
+        <th></th>
+        <th>Anzahl</th>
+        <th>Name</th>
+        <th>Preis</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:if="${products.isEmpty()}">
+        <td colspan="4">Du hast noch keine Produkte hinzugefügt</td>
+      </tr>
+
+
+      <tr v-for="(product, i) in products" >
+        <td>
+            <button @click="add(i)" class="btn btn-outline-success.text-nowrap" style="width: 40px; height:40px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg></button>
+
+            <button @click="subtract(i)" class="btn btn-outline-danger.text-nowrap" style="width: 40px; height:40px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg></button>
+        </td>
+
+        <td>
+          {{product.count}}
+        </td>
+
+        <td>{{product.name}}</td>
+
+        <td>{{mapPrice(product.price)}}</td>
+
+        <td>
+          <form sction="/listproducts" :action="'/products/' + product.id" method="post">
+            <button class="btn btn-light.text-nowrap" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg></button>
+          </form>
+        </td>
+
+        <td>
+        </td>
+
+      </tr>
+      <tr>
+        <th></th>
+        <th>Gesamtpreis:</th>
+        <th></th>
+        <th>{{mapPrice(gesamtPreis)}}</th>
+        <th></th>
+      </tr>
+      </tbody>
+    </table>
+
+    </div>
+  </center>
+
+
+
+</main>
+
+
+<script src="effects/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="effects/dashboard.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script  th:inline="javascript">
+
+
+  new Vue({
+    el: '#app',
+    data: {
+      products: [[${products}]]
+    },
+    methods: {
+
+
+
+      add(i) {
+        this.products[i].count++;
+        fetch(`/products/${this.products[i].id}/count/${this.products[i].count}`, {
+          method: 'PATCH'
+        });
+      },
+
+
+
+      subtract(i) {
+        if (this.products[i].count === 0) return;
+        this.products[i].count--;
+        fetch(`/products/${this.products[i].id}/count/${this.products[i].count}`, {
+          method: 'PATCH'
+        });
+      },
+      mapPrice(price) {
+        return (price.toFixed(2)).replaceAll('.', ',') + '€';
+      }
+    },
+
+
+
+     computed: {
+      gesamtPreis() {
+        return this.products.reduce((acc, val) => {
+          acc += val.price * val.count;
+          return acc;
+        }, 0);
+      }
+     }
+
+
+
+
+
+
+
+
+
+
+
+  })
+</script>
+
+<footer class="bg-white">
+
+
+  <div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© Webtech 2021</p>
+    </div>
+  </div>
+
+
+</footer>
+</body>
+</html>
