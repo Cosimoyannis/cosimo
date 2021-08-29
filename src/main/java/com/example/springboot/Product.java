@@ -1,14 +1,8 @@
 package com.example.springboot;
 
 
-import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import javax.persistence.Table;
-import javax.annotation.processing.Generated;
+
 import javax.persistence.*;
 
 
@@ -33,8 +27,7 @@ public class Product {
     @Nullable
     private int count;
 
-  /*  @Nullable
-    private double number;*/
+
 
 
 
@@ -43,7 +36,6 @@ public class Product {
     public Product(int id, String name, double price, String owner, int count) {
         this.name = name;
         this.price = price;
-//        this.number = number;
         this.id = id;
         this.owner = owner;
         this.count = 1;

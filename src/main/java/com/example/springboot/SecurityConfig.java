@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
         OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
-        successHandler.setPostLogoutRedirectUri(URI.create("https://einkaufsliste2021.herokuapp.com/"));
+        successHandler.setPostLogoutRedirectUri(URI.create("https://cosimospage.herokuapp.com/"));
         return successHandler;
     }
 

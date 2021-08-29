@@ -1,16 +1,10 @@
 package com.demo;
-import com.example.springboot.Product;
 import com.example.springboot.ProductRepository;
 import com.example.springboot.ProductServiceImpl;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.security.core.parameters.P;
 
-import java.util.List;
 import static org.mockito.Mockito.doReturn;
 
 @SpringBootTest
