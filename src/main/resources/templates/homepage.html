@@ -77,13 +77,16 @@
 <header>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
+
+
         <div class="container-fluid">
 
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="/">
                 <div>
-                    <img
+                    <img class="pull-right"
                             src="bilder/logo simple.png"
-                            style=" width: 20%;"
+                            style=" width: 5%; right: 1000px; margin-left: 30px;"
+
                     >
                 </div>
             </a>
@@ -93,12 +96,13 @@
 
             </div>
 
-            <div class="col-md-3 text-end">
+            <div class="col-md-3 text-end"
+            style="margin-right: 30px;">
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">FAQ</a></li>
-                    <li><a href="#" class="nav-link px-2 link-secondary">Login</a></li>
+                    <li><a href="#" class="nav-link px-3 link-light h5">Home</a></li>
+                    <li><a href="#" class="nav-link px-3 link-light h5">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-3 link-light h5">FAQ</a></li>
+                    <li><a href="#" class="nav-link px-3 link-light h5">Login</a></li>
                 </ul>
             </div>
 
@@ -166,12 +170,12 @@
          data-parallax="scroll"
          data-bleed="0"
          data-speed="0"
-         data-image-src="/bilder/backtest4.png"
-         style="height:800px;position:relative;margin:0">
+         data-image-src="/bilder/backtest5.png"
+         style="height:800px;position:relative;margin:0; top: -58px;">
         <span>   <a href="#bottom">
             <img class="down"
                  src="bilder/nachster.png"
-                 style=" padding-top:650px; width: 5%; right: 48%; position: absolute;"
+                 style=" padding-top:650px; width: 5%; right: 48%; position: absolute; top: 60px"
             >
 
 
@@ -275,6 +279,12 @@
 
 
 <script src="effects/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 720);
+    });
+</script>
 
 
 

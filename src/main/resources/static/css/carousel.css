@@ -9,6 +9,26 @@ body {
   background-image:url("bilder/notebook.jpg");
 
 }
+
+.bg-white {
+  background: transparent !important;
+
+}
+
+.navlogo {
+
+  right: 100px;
+
+
+}
+
+.bg-white.scrolled {
+  background: #3498cf !important;
+
+}
+
+
+
 /*
 img.down {
   opacity:0.5;

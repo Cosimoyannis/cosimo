@@ -3821,6 +3821,7 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -3952,7 +3953,10 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+
 }
+
+
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -6346,6 +6350,7 @@ div.parallax-container {
 .d-flex {
   display: flex !important;
 }
+
 
 .d-inline-flex {
   display: inline-flex !important;
