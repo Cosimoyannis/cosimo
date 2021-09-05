@@ -74,39 +74,33 @@
 
 
 
-<!--<header>
+<header>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="/listproducts">Meine Einkaufsliste</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Anmelden</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/createproduct">Produkt hinzufügen</a>
-                    </li>
-                </ul>
-
-
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                 <div>
-                <form class="d-flex" method="POST" action="#" th:action="@{/logout}">
-                    <button class="btn btn-outline-danger" type="submit">Logout</button>
-                </form>
+                    <img
+                            src="bilder/logo simple.png"
+                            style=" width: 20%;"
+                    >
+                </div>
+            </a>
+
+
 
 
             </div>
 
-
+            <div class="col-md-3 text-end">
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">FAQ</a></li>
+                    <li><a href="#" class="nav-link px-2 link-secondary">Login</a></li>
+                </ul>
             </div>
-
 
 
 
@@ -118,7 +112,10 @@
 
 
 
-</header>-->
+</header>
+
+
+<!--
 
 <header>
     <nav class="navbar navbar-expand-md fixed-top bg-white navbar-light">
@@ -152,6 +149,7 @@
         <nav>
 
 </header>
+-->
 
 
 <main>
@@ -168,13 +166,15 @@
          data-parallax="scroll"
          data-bleed="0"
          data-speed="0"
-         data-image-src="/bilder/BACKGROUND.png"
+         data-image-src="/bilder/backtest4.png"
          style="height:800px;position:relative;margin:0">
         <span>   <a href="#bottom">
             <img class="down"
                  src="bilder/nachster.png"
-                 style="position:absolute; padding-top:650px; left:47%; width: 5%;"
+                 style=" padding-top:650px; width: 5%; right: 48%; position: absolute;"
             >
+
+
         </a></span>
     </div>
 

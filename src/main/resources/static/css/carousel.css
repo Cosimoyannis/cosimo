@@ -23,7 +23,9 @@ img.down:hover {
   transition:opacity 1.2s ease, transform 1.2s ease;
 } */
 
-.down { animation: turner 5s infinite linear }
+.down {
+  animation: turner 5s infinite linear;
+}
 
 @keyframes turner{
   from{  transform: rotateY(0deg)   }
