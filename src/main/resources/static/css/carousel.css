@@ -15,6 +15,18 @@ body {
 
 }
 
+.link-dark {
+  color: black !important;
+  font-family: Arial;
+}
+
+.link-dark.scrolled {
+color: white !important;
+  font-family: Arial;
+
+}
+
+
 .navlogo {
 
   right: 100px;
@@ -23,11 +35,23 @@ body {
 }
 
 .bg-white.scrolled {
-  background: #3498cf !important;
-
+  background: black !important;
 }
 
+.loggo {
+  background-image:url("/subbyblack.png") !important;
+  width: 4%;
+  right: 1000px;
+  margin-left: 30px;
+}
 
+.data-image-src.scrolled {
+
+  background-image:url("/subby.png") !important;
+  width: 4%;
+  right: 1000px;
+  margin-left: 30px;
+}
 
 /*
 img.down {
@@ -150,3 +174,5 @@ img.down:hover {
   bottom:0pt;
 
 }
+
+
