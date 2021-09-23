@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Hugo 0.82.0">
-        <title>PriceCart</title>
+        <title>Subby</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
@@ -16,64 +17,21 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <style>
-            .bd-placeholder-img {
-                background-image: url(/bilder/logo.handy.png);
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
 
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
 
 
         <!-- Custom styles for this template -->
         <link href="css/carousel.css" rel="stylesheet">
 
-    </head>
 </head>
-
-
-
-
 
 
 <body>
 
 
-
-
 <!--<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/app">Meine Einkaufsliste</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/signin">Anmelden</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/register">Registrieren</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>-->
 
 
-
-<header>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
 
@@ -98,7 +56,7 @@
 
             <div class="col-md-4 text-end"
             style="margin-right: 30px;">
-                <ul class="nav col-12 col-md-auto mb-3 justify-content-center mb-md-0">
+                <ul id="menulist" class="nav col-12 col-md-auto mb-3 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-3 link-dark h5">Über Uns</a></li>
                     <li><a href="#" class="nav-link px-3 link-dark h5">Preise</a></li>
                     <li><a href="#" class="nav-link px-3 link-dark h5">Portfolio</a></li>
@@ -106,51 +64,52 @@
                 </ul>
             </div>
 
+        <img src="/bilder/list.png" class="menu-icon" onclick="togglemenu()">
+
         </div>
+
 
 
     </nav>
 
 
 
-</header>
+</header>-->
 
 
-<!--
 
 <header>
-    <nav class="navbar navbar-expand-md fixed-top bg-white navbar-light">
 
-    <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
+<div class="container1">
 
+<div class="navbar1">
 
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <div>
-                    <img
-                            src="bilder/logo simple.png"
-                            style=" width: 20%;"
-                    >
-                </div>
-            </a>
+    <img class="pull-right"
+         src="bilder/subbyblack.png"
+         style=" width: 4%; right: 1000px; margin-left: 30px;"
+         id="myImage">
 
+    <nav>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">1</a></li>
+        </ul>
+    </nav>
 
+    <img src="/bilder/list.png" class="menu-icon" onclick="togglemenu()">
 
-            <div class="col-md-3 text-end">
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">FAQ</a></li>
-                    <li><a href="#" class="nav-link px-2 link-secondary">Login</a></li>
-                </ul>
-            </div>
-        </header>
-    </div>
+</div>
 
-        <nav>
+</div>
 
 </header>
--->
+
+
+
+
+
+
 
 
 <main>
@@ -163,22 +122,31 @@
     <script src="effects/parallax.js"></script>
 
 
+
+
     <div class="parallax-container"
          data-parallax="scroll"
          data-bleed="0"
          data-speed="0"
          data-image-src="/bilder/backtest7.png"
-         style="height:800px;position:relative;margin:0; top: -58px;">
+         data-natural-width="4740"
+         data-natural-height="3164"
+    >
+
+
         <span>   <a href="#bottom">
             <img class="down"
                  src="bilder/nachsterwhite.png"
-                 style=" padding-top:650px; width: 5%; right: 48%; position: absolute; top: 60px"
+                 style=" width: 5%; right: 48%; position: absolute; top: 88%"
             >
 
 
         </a></span>
     </div>
 
+    <br>
+    <br>
+    <br>
 
     <div class="centerer">
 
@@ -310,6 +278,21 @@
     }
 </script>
 
+<script>
+
+    var menulist = document.getElementById("menulist");
+
+    menulist.style.maxHeight = "0px";
+
+    function  togglemenu() {
+        if(menulist.style.maxHeight == "0px")
+        {
+            menulist.style.maxHeight = "130px"
+        }
+        else menulist.style.maxHeight = "0px"
+    }
+
+</script>
 
 
 
