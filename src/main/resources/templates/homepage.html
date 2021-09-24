@@ -11,25 +11,18 @@
         <title>Subby</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
-
-
-        <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-
-
-        <!-- Custom styles for this template -->
         <link href="css/carousel.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
 
 </head>
 
 
 <body>
 
+<!--
 
-<!--<header>
+<header>
 
 
 
@@ -56,7 +49,7 @@
 
             <div class="col-md-4 text-end"
             style="margin-right: 30px;">
-                <ul id="menulist" class="nav col-12 col-md-auto mb-3 justify-content-center mb-md-0">
+                <ul class="nav col-12 col-md-auto mb-3 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-3 link-dark h5">Über Uns</a></li>
                     <li><a href="#" class="nav-link px-3 link-dark h5">Preise</a></li>
                     <li><a href="#" class="nav-link px-3 link-dark h5">Portfolio</a></li>
@@ -64,7 +57,7 @@
                 </ul>
             </div>
 
-        <img src="/bilder/list.png" class="menu-icon" onclick="togglemenu()">
+
 
         </div>
 
@@ -74,36 +67,32 @@
 
 
 
-</header>-->
+</header>
+
+
+-->
 
 
 
-<header>
 
-<div class="container1">
+<div1 class="navbar1 bg-white fixed-top">
 
-<div class="navbar1">
-
-    <img class="pull-right"
+    <img class="logo1"
          src="bilder/subbyblack.png"
-         style=" width: 4%; right: 1000px; margin-left: 30px;"
          id="myImage">
 
-    <nav>
-        <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-        </ul>
-    </nav>
+    <nav1>
+        <ul1 id="menulist">
+            <li1><a1 href="#" class="link-dark">Leistungen</a1></li1>
+            <li1><a1 href="#" class="link-dark">Portfolio</a1></li1>
+            <li1><a1 href="#" class="link-dark">Über uns</a1></li1>
+        </ul1>
+    </nav1>
 
-    <img src="/bilder/list.png" class="menu-icon" onclick="togglemenu()">
+    <img src="bilder/list.png" id="myImage1" class="menu-icon1" onclick="togglemenu()">
 
-</div>
+</div1>
 
-</div>
-
-</header>
 
 
 
@@ -252,13 +241,13 @@
 
 <script>
     $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 720);
+        $('div1').toggleClass('scrolled', $(this).scrollTop() > 720);
     });
 </script>
 
 <script>
     $(window).scroll(function(){
-        $('a').toggleClass('scrolled', $(this).scrollTop() > 720);
+        $('a1').toggleClass('scrolled', $(this).scrollTop() > 720);
     });
 </script>
 
@@ -269,14 +258,20 @@
 
     function scrollFunction() {
         var image = document.getElementById("myImage");
+        var image1 = document.getElementById("myImage1");
+
         if (document.documentElement.scrollTop > 720)
-            image.src =
-                "bilder/subby.png";
+            image.src = "bilder/subby.png";
+            image1.src = "bilder/list1.png";
+
         else
-            image.src =
-                "bilder/subbyblack.png";
+            image.src = "bilder/subbyblack.png";
+            image1.src = "bilder/list.png";
     }
 </script>
+
+
+
 
 <script>
 
@@ -287,7 +282,7 @@
     function  togglemenu() {
         if(menulist.style.maxHeight == "0px")
         {
-            menulist.style.maxHeight = "130px"
+            menulist.style.maxHeight = "280px"
         }
         else menulist.style.maxHeight = "0px"
     }

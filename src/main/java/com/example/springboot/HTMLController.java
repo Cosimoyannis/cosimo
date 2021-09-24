@@ -22,6 +22,11 @@ public class HTMLController {
         return "homepage";
     }
 
+    @GetMapping(path = Endpoints.HOME)
+    public String home() {
+        return "home";
+    }
+
     @GetMapping(path = Endpoints.BUTTON)
     public String button() {
         return "button";

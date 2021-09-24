@@ -8,7 +8,7 @@ body {
   color: #000000;
 }
 
-.container1 {
+/*.container1 {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
@@ -42,12 +42,7 @@ nav ul li a {
   text-decoration: none;
   color: black;
   font-size: 14px;
-}
-
-
-
-
-
+}*/
 
 
 
@@ -97,13 +92,8 @@ color: white !important;
   margin-left: 30px;
 }
 
-.data-image-src.scrolled {
 
-  background-image:url("/subby.png") !important;
-  width: 4%;
-  right: 1000px;
-  margin-left: 30px;
-}
+
 
 /*
 img.down {
@@ -195,7 +185,7 @@ img.down:hover {
 
 
 
-@media only screen and (max-width: 700px) {
+/*@media only screen and (max-width: 700px) {
 
   col-md-4 text-end nav ul {
 
@@ -218,6 +208,6 @@ img.down:hover {
 
   }
 
-}
+}*/
 
 
