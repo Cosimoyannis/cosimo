@@ -243,13 +243,13 @@
 
 <script>
     $(window).scroll(function(){
-        $('div1').toggleClass('scrolled', $(this).scrollTop() > 720);
+        $('div1').toggleClass('scrolled', $(this).scrollTop() > 10);
     });
 </script>
 
 <script>
     $(window).scroll(function(){
-        $('a1').toggleClass('scrolled', $(this).scrollTop() > 720);
+        $('a1').toggleClass('scrolled', $(this).scrollTop() > 10);
     });
 </script>
 
@@ -261,7 +261,7 @@
 
     function scrollFunction() {
         var image = document.getElementById("myImage");
-        if (document.documentElement.scrollTop > 720)
+        if (document.documentElement.scrollTop > 10)
             image.src = "bilder/subby.png";
         else
             image.src = "bilder/subbyblack.png"
@@ -269,7 +269,7 @@
 
     function scrollFunctionOne() {
         var image = document.getElementById("myImageOne");
-        if (document.documentElement.scrollTop > 720)
+        if (document.documentElement.scrollTop > 10)
             image.src = "bilder/list1.png";
         else
             image.src = "bilder/list.png"

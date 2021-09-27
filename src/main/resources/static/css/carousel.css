@@ -96,6 +96,8 @@ color: white !important;
 
 .bg-white.scrolled {
   background: black !important;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 .loggo {

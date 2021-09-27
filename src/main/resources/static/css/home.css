@@ -102,8 +102,15 @@ nav1 ul1 li1 a1 {
 
     .menu-icon1 {
         display: block;
-        margin-right: 80px;
-        width: 50px;
+        margin-right: 30px;
+        width: 40px;
+    }
+
+    .logo1{
+        width: 30px;
+        cursor: pointer;
+        margin: 30px 0;
+        margin-left: 30px;
     }
 
     #menulist{
@@ -111,4 +118,14 @@ nav1 ul1 li1 a1 {
         transition: 0.5s;
     }
 
+
+    #div1{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    #a1{
+        overflow: hidden;
+        transition: 0.5s;
+    }
 }
