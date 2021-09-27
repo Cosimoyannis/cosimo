@@ -45,10 +45,23 @@ nav ul li a {
 }*/
 
 
+.arrowOne{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 100%;
 
+}
+
+/*.parallax-container {
+  height:800px;
+  position:relative;
+  margin:0;
+
+}*/
 
 .parallax-container {
-  height:800px;
+  object-fit: contain;
   position:relative;
   margin:0;
 
@@ -111,6 +124,7 @@ img.down:hover {
 
 .down {
   animation: turner 5s infinite linear;
+  width: 5%;
 }
 
 
