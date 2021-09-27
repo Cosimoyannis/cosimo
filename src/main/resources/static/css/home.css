@@ -83,7 +83,7 @@ nav1 ul1 li1 a1 {
         width: 100%;
         background: black;
         position: absolute;
-        top: 120px;
+        top: 90px;
         right: 0;
         z-index: 2;
     }
@@ -95,9 +95,13 @@ nav1 ul1 li1 a1 {
     }
 
     nav1 ul1 li1 a1 {
-        color: white;
-        font-size: 40px;
+        font-color: white!important;
+        font-size: 40px!important;
 
+    }
+
+    .link-dark {
+        color: white!important;
     }
 
     .menu-icon1 {
