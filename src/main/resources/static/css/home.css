@@ -77,6 +77,12 @@ nav1 ul1 li1 a1 {
 
 @media only screen and (max-width: 700px) {
 
+    .parallax-container {
+        position:relative;
+        margin:0;
+
+    }
+
 
      nav1 ul1 {
 
