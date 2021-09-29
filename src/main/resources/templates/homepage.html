@@ -227,10 +227,10 @@
 
 
 
-<!--
+
 <script>
     $(document).ready(function() {
-        if($(window).width() == 375 && $(window).height() == 667 ){ $(".parallax-container").attr("data-image-src", "/bilder/iphone6789" +
+        if($(window).width() < 376 && $(window).height() < 668 ){ $(".parallax-container").attr("data-image-src", "/bilder/iphone6789" +
             ".png");
         }
 
@@ -239,7 +239,7 @@
 
 <script>
     $(document).ready(function() {
-        if($(window).width() == 1080 && $(window).height() == 1920 ) { $(".parallax-container").attr("data-image-src", "/bilder/iphone678" +
+        if($(window).width() == 414 && $(window).height() == 736 ) { $(".parallax-container").attr("data-image-src", "/bilder/iphone678" +
             ".png");
         }
 
@@ -248,17 +248,17 @@
 
 <script>
     $(document).ready(function() {
-        if($(window).width() == 1125 && $(window).height() == 2436 ) { $(".parallax-container").attr("data-image-src", "/bilder/iphonex" +
+        if($(window).width() == 375 && $(window).height() == 812 ) { $(".parallax-container").attr("data-image-src", "/bilder/iphonex" +
             ".png");
         }
 
     });
 </script>
--->
+
 
 <script>
     $(document).ready(function() {
-        if($(window).width() < 1124) { $(".parallax-container").attr("data-image-src", "/bilder/alternative" +
+        if($(window).width() < 1124 && $(window).width() > 414) { $(".parallax-container").attr("data-image-src", "/bilder/alternative" +
             ".png");
         }
 
