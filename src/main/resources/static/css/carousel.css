@@ -256,4 +256,8 @@ img.down:hover {
 }
 
 
+@media only screen and (max-width: 1124px) {
+    .parallax-container {
 
+    }
+}
