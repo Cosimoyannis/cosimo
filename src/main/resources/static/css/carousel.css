@@ -53,19 +53,9 @@ nav ul li a {
 
 }
 
-/*.parallax-container {
-  height:800px;
-  position:relative;
-  margin:0;
 
-}*/
 
-.parallax-container {
-  object-fit: contain;
-  position:relative;
-  margin:0;
 
-}
 
 
 
@@ -225,5 +215,55 @@ img.down:hover {
   }
 
 }*/
+
+
+.parallax-container {
+  object-fit: contain;
+  position:relative;
+  height: 800px;
+  margin:0;
+
+
+}
+
+/*Iphone 6,7,8 Plus*/
+@media only screen and (max-width: 414px) {
+
+  @media only screen and (max-height: 736px) {
+
+
+    .parallax-container {
+      height: 736px;
+      margin: 0;
+
+
+    }
+  }
+  }
+
+/*Iphone 6,7,8*/
+@media only screen and (max-width: 375px) {
+
+  @media only screen and (max-height: 667px) {
+
+    .parallax-container {
+      height: 667px;
+      margin:0;
+    }
+  }
+
+  /*Iphone X*/
+  @media only screen and (max-height: 812px) {
+
+    .parallax-container {
+      height: 812px;
+      margin: 0;
+
+
+    }
+
+  }
+
+}
 
 
