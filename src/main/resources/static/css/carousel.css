@@ -240,8 +240,8 @@ img.down:hover {
 @media only screen and (max-width: 375px) {
   @media only screen and (max-height: 667px) {
     .parallax-container {
-      height: 500px;
-      margin-top: -90px;
+      width: 375px;
+     margin-top: -70px;
     }
   }
 }
