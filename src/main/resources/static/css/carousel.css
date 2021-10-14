@@ -67,21 +67,19 @@ nav ul li a {
 
 .link-dark {
   color: black !important;
-  font-family: Arial;
+  font-family: 'aileronbold' !important;
+  letter-spacing: 1px !important;
 }
 
 .link-dark.scrolled {
-color: white !important;
-  font-family: Arial;
-
+  color: white !important;
+  font-family: 'aileronbold' !important;
+  letter-spacing: 1px !important;
 }
 
 
 .navlogo {
-
   right: 100px;
-
-
 }
 
 .bg-white.scrolled {
@@ -260,4 +258,11 @@ img.down:hover {
     .parallax-container {
 
     }
+}
+
+
+@media only screen and (min-width: 1920px) {
+  .parallax-container {
+    height: 1080px;
+  }
 }

@@ -14,6 +14,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/carousel.css" rel="stylesheet">
         <link href="css/home.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 
 </head>
 
@@ -32,9 +33,9 @@
 
     <nav1>
         <ul1 id="menulist">
-            <li1><a1 href="#" class="link-dark">Leistungen</a1></li1>
-            <li1><a1 href="#" class="link-dark">Portfolio</a1></li1>
-            <li1><a1 href="#" class="link-dark">Über uns</a1></li1>
+            <li1><a1 href="#" class="link-dark">LEISTUNGEN</a1></li1>
+            <li1><a1 href="#" class="link-dark">PORTFOLIO</a1></li1>
+            <li1><a1 href="#" class="link-dark">ABOUT US</a1></li1>
         </ul1>
     </nav1>
 
@@ -134,7 +135,7 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">Rezepte. <span class="text-muted"><br>Kreiere eigene Gerichte.</span></h2>
+                <h2 class="featurette-heading">Responsive. <span class="text-muted"><br>Kreiere eigene Gerichte.</span></h2>
                 <p class="lead">Mit einem Klick werden alle Zutaten deines zuvor erstellten Gerichtes hinzugefügt .</p>
             </div>
             <div class="col-md-5">
@@ -148,7 +149,7 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Freunde. <span class="text-muted"><br>Deine Freunde kaufen für dich ein?</span></h2>
+                <h2 class="featurette-heading">Individuell. <span class="text-muted"><br>Deine Freunde kaufen für dich ein?</span></h2>
                 <p class="lead">Teile deine Einkaufslisten mit deinen Freunden und deiner Familie um sie wissen zu lassen was du brauchst.</p>
             </div>
             <div class="col-md-5 order-md-1">
@@ -162,7 +163,7 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">Preise. <span class="text-muted"><br>Behalte dein Budget im Überblick.</span></h2>
+                <h2 class="featurette-heading">Funktionen. <span class="text-muted"><br>Behalte dein Budget im Überblick.</span></h2>
                 <p class="lead">Mit dem Preis-Tracker werden automatisch die derzeitigen Preise, zusammen mit dem jeweiligen Produkt, deiner Einkaufsliste hinzugefügt.</p>
             </div>
             <div class="col-md-5">
@@ -265,6 +266,14 @@
     });
 </script>
 
+<script>
+    $(document).ready(function() {
+        if($(window).width() > 1124 && $(window).height() > 813) { $(".parallax-container").attr("data-image-src", "/bilder/desktop" +
+            ".png");
+        }
+
+    });
+</script>
 
 
 <script>
@@ -282,6 +291,15 @@
     }
 
 </script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+</style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+</style>
+
 
 
 
