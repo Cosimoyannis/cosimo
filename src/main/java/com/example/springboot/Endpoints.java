@@ -13,6 +13,9 @@ public class Endpoints {
     public static final String ALLPRODUCTS = "/allproducts";
     public static final String LEISTUNGEN = "/leistungen";
     public static final String PRODUCT = "/product";
+    public static final String TEST = "/test";
+
+
 
 
 

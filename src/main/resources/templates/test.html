@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.82.0">
+        <title>Subby</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+        <link href="css/product.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+
+</head>
+
+
+<body>
+
+
+
+
+
+<div1 class="navbar1 bg-white fixed-top">
+
+    <a href="/">
+    <img class="logo1"
+         src="bilder/subbyblack2.png"
+         id="myImage">
+    </a>
+
+    <nav1>
+        <ul1 id="menulist">
+            <li1><a href="/test" class="link-dark">Leistungen</a></li1>
+            <li1><a href="#" class="link-dark">Projekte</a></li1>
+            <li1><a href="#" class="link-dark">Über uns</a></li1>
+        </ul1>
+    </nav1>
+
+    <img src="bilder/list.png" id="myImageOne" class="menu-icon1" onclick="togglemenu()">
+
+</div1>
+
+
+
+
+
+
+<main>
+
+
+
+
+
+    <script src="effects/jquery.min.js"></script>
+    <script src="effects/parallax.js"></script>
+
+
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 fw-normal">Unsere Leistungen</h1>
+            <p class="lead fw-normal">Wir bieten Ihnen verschiedene Leistungen an um Ihr Unternehmen digital zu unterstützen.</p>
+            <a class="btn btn-outline-secondary" href="#">Lets Go!</a>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Aktive Speisekarte</h2>
+                <p class="lead">Ändern Sie selber ganz einfach Ihre Gerichte und Preise.</p>
+            </div>
+            <div class="mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                        src="/bilder/pizza.svg"
+                        width="30%"
+                >
+            </div>
+        </div>
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Kontaktformular</h2>
+                <p class="lead">Ihre Kunden können Sie direkt über Ihre Internetseite anschreiben.</p>
+            </div>
+            <div class="mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                        src="/bilder/mail.svg"
+                        width="30%"
+                >
+            </div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Google Maps</h2>
+                <p class="lead">Mit der intigrierten Map von Google finden Ihre Kunden ganz schnell zu Ihnen.</p>
+            </div>
+            <div class="mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                        src="/bilder/map.svg"
+                        width="30%"
+                >
+            </div>
+        </div>
+        <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Lieferdienste</h2>
+                <p class="lead">Ihre Kunden können werden zu den Lieferdiensten weitergeleitet und können bequem bestellen.</p>
+            </div>
+            <div class="mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                        src="/bilder/car.svg"
+                        width="30%"
+                >
+            </div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Account mit Okta</h2>
+                <p class="lead">Sicherheit ist wichtig, weshalb dies das etablierte Unternehmen Okta für uns übernimmt.</p>
+            </div>
+            <div class="mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                        src="/bilder/user.svg"
+                        width="30%"
+                >
+            </div>
+        </div>
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Reservierung</h2>
+                <p class="lead">Ihre Kunden können ganz einfach über Ihre Interentseite einen Tisch bei Ihnen reservieren.</p>
+            </div>
+            <div class=" mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <img
+                src="/bilder/restaurant.svg"
+                width="30%"
+                >
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+<script src="effects/bootstrap.bundle.min.js"></script>
+
+<script src="effects/navbar.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        if($(window).width() < 376 && $(window).height() < 668 ){ $(".parallax-container").attr("data-image-src", "/bilder/iphone6789" +
+            ".png");
+        }
+
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        if($(window).width() < 415 && $(window).width() > 376 && $(window).height() < 737 && $(window).height() > 668 ) { $(".parallax-container").attr("data-image-src", "/bilder/iphone678" +
+            ".png");
+        }
+
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        if($(window).width() < 376 && $(window).height() < 813 && $(window).height() > 737) { $(".parallax-container").attr("data-image-src", "/bilder/iphonex" +
+            ".png");
+        }
+
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        if($(window).width() < 1124 && $(window).width() > 414) { $(".parallax-container").attr("data-image-src", "/bilder/alternative" +
+            ".png");
+        }
+
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        if($(window).width() > 1124 && $(window).height() > 813) { $(".parallax-container").attr("data-image-src", "/bilder/desktop" +
+            ".png");
+        }
+
+    });
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -38,6 +38,9 @@ public class HTMLController {
     @GetMapping(path = Endpoints.PRODUCT)
     public String product() {return "product";}
 
+    @GetMapping(path = Endpoints.TEST)
+    public String test() {return "test";}
+
     @GetMapping(path = Endpoints.PRODUCTS)
     String products(Model model) {
 

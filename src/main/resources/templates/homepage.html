@@ -27,14 +27,15 @@
 
 <div1 class="navbar1 bg-white fixed-top">
 
-    <img href="/"
-         class="logo1"
-         src="bilder/subbyblack2.png"
-         id="myImage">
+    <a href="/">
+        <img class="logo1"
+             src="bilder/subbyblack2.png"
+             id="myImage">
+    </a>
 
     <nav1>
         <ul1 id="menulist">
-            <li1><a href="/leistungen" class="link-dark">Leistungen</a></li1>
+            <li1><a href="/test" class="link-dark">Leistungen</a></li1>
             <li1><a href="#" class="link-dark">Projekte</a></li1>
             <li1><a href="#" class="link-dark">Über uns</a></li1>
         </ul1>
@@ -191,43 +192,7 @@
 
 <script src="effects/bootstrap.bundle.min.js"></script>
 
-<script>
-    $(window).scroll(function(){
-        $('div1').toggleClass('scrolled', $(this).scrollTop() > 10);
-    });
-</script>
-
-<script>
-    $(window).scroll(function(){
-        $('a').toggleClass('scrolled', $(this).scrollTop() > 10);
-    });
-</script>
-
-<script>
-    window.onscroll = function () {
-        scrollFunction();
-        scrollFunctionOne();
-    };
-
-    function scrollFunction() {
-        var image = document.getElementById("myImage");
-        if (document.documentElement.scrollTop > 10)
-            image.src = "bilder/subbywhite.png";
-        else
-            image.src = "bilder/subbyblack2.png"
-    }
-
-    function scrollFunctionOne() {
-        var image = document.getElementById("myImageOne");
-        if (document.documentElement.scrollTop > 10)
-            image.src = "bilder/list1.png";
-        else
-            image.src = "bilder/list.png"
-    }
-</script>
-
-
-
+<script src="effects/navbar.js"></script>
 
 
 <script>
@@ -277,29 +242,7 @@
 </script>
 
 
-<script>
 
-    var menulist = document.getElementById("menulist");
-
-    menulist.style.maxHeight = "0px";
-
-    function  togglemenu() {
-        if(menulist.style.maxHeight == "0px")
-        {
-            menulist.style.maxHeight = "280px"
-        }
-        else menulist.style.maxHeight = "0px"
-    }
-
-</script>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
-</style>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-</style>
 
 
 
