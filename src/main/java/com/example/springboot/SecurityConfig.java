@@ -31,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(
 
                         HttpMethod.GET,
-                        Endpoints.HOMEPAGE
+                        Endpoints.HOMEPAGE,
+                        Endpoints.TEST
 
                 ).permitAll()
                 .antMatchers(
