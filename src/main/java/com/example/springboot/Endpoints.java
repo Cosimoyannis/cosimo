@@ -11,7 +11,8 @@ public class Endpoints {
     public static final String LISTPRODUCTS = "/listproducts";
     public static final String BUTTON = "/button";
     public static final String ALLPRODUCTS = "/allproducts";
-
+    public static final String LEISTUNGEN = "/leistungen";
+    public static final String PRODUCT = "/product";
 
 
 

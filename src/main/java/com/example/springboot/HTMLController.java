@@ -32,6 +32,12 @@ public class HTMLController {
         return "button";
     }
 
+    @GetMapping(path = Endpoints.LEISTUNGEN)
+    public String leistungen() {return "leistungen";}
+
+    @GetMapping(path = Endpoints.PRODUCT)
+    public String product() {return "product";}
+
     @GetMapping(path = Endpoints.PRODUCTS)
     String products(Model model) {
 

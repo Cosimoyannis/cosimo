@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.82.0">
+<title>Subby</title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/carousel.css" rel="stylesheet">
+<link href="css/home.css" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+
+</head>
+
+
+<body>
+<link href="css/carousel.css" rel="stylesheet">
+
+<div1 class="navbar1 bg-white fixed-top">
+
+    <img class="logo1"
+         src="bilder/subbyblack2.png"
+         id="myImage"
+         href="/">
+
+    <nav1>
+        <ul1 id="menulist">
+            <li1><a href="/leistungen" class="link-dark">Leistungen</a></li1>
+            <li1><a href="#" class="link-dark">Projekte</a></li1>
+            <li1><a href="#" class="link-dark">Über uns</a></li1>
+        </ul1>
+    </nav1>
+
+    <img src="bilder/list.png" id="myImageOne" class="menu-icon1" onclick="togglemenu()">
+
+</div1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    var menulist = document.getElementById("menulist");
+
+    menulist.style.maxHeight = "0px";
+
+    function  togglemenu() {
+        if(menulist.style.maxHeight == "0px")
+        {
+            menulist.style.maxHeight = "280px"
+        }
+        else menulist.style.maxHeight = "0px"
+    }
+
+</script>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+        scrollFunctionOne();
+    };
+
+    function scrollFunction() {
+        var image = document.getElementById("myImage");
+        if (document.documentElement.scrollTop > 10)
+            image.src = "bilder/subbywhite.png";
+        else
+            image.src = "bilder/subbyblack2.png"
+    }
+
+
+    function scrollFunctionOne() {
+        var image = document.getElementById("myImageOne");
+        if (document.documentElement.scrollTop > 10)
+            image.src = "bilder/list1.png";
+        else
+            image.src = "bilder/list.png"
+    }
+</script>
+
+<script>
+    $(window).scroll(function(){
+        $('div1').toggleClass('scrolled', $(this).scrollTop() > 10);
+    });
+</script>
+
+<script>
+    $(window).scroll(function(){
+        $('a').toggleClass('scrolled', $(this).scrollTop() > 10);
+    });
+</script>
+
+
+</body>
+
+
+</html>
