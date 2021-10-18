@@ -1,6 +1,9 @@
 .container {
 }
 
+a {
+    line-height: 80px;
+}
 
 .logo1{
     width: 150px;
@@ -84,7 +87,7 @@ li {
     color: #000000;
     font-family: var(--bs-font-sans-serif) !important;
     letter-spacing: 1px !important;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .nav-link.scrolled {
@@ -108,7 +111,7 @@ li {
         position: fixed;
         left: -100%;
         top: 70px;
-        height: 500px;
+        height: 400px;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
@@ -123,8 +126,10 @@ li {
     }
 
 
-    .nav-item {
 
+    .nav-item {
+        top: 100px;
+        bottom: 100px;
     }
 
 
@@ -152,6 +157,8 @@ li {
     nav-link {
         color: black;
     }
+
+
 
     .nav-link.scrolled {
         color: black;

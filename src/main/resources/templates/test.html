@@ -180,7 +180,7 @@
         const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
     const navLink = document.querySelectorAll(".nav-link");
-    const navBg = document.querySelectorAll(".bg-white");
+    const navBar = document.querySelectorAll(".navbar");
 
     hamburger.addEventListener("click", mobileMenu);
     navLink.forEach(n => n.addEventListener("click", closeMenu));
@@ -188,7 +188,7 @@
     function mobileMenu() {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
-        navBg.classList.toggle("active");
+        navBar.classList.toggle("active");
     }
 
 

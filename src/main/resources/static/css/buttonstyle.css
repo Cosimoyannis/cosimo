@@ -15,11 +15,7 @@ h4 {
 
 }
 
-a {
-    text-decoration: none;
-    line-height: 80px;
-    color: black;
-}
+
 
 .centerer {
     width: 100%;
@@ -110,6 +106,8 @@ a {
     color: black;
     /* rtl:remove */
     letter-spacing: 1px!important;
+    text-decoration: none;
+    line-height: 80px;
 
 }
 .btn-11:before, .btn-11:after {
