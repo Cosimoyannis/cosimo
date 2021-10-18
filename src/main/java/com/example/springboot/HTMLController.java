@@ -36,10 +36,14 @@ public class HTMLController {
     public String leistungen() {return "leistungen";}
 
     @GetMapping(path = Endpoints.PRODUCT)
+    
     public String product() {return "product";}
 
     @GetMapping(path = Endpoints.TEST)
     public String test() {return "test";}
+
+    @GetMapping(path = Endpoints.NAVTEST)
+    public String navtest() {return "navtest";}
 
     @GetMapping(path = Endpoints.PRODUCTS)
     String products(Model model) {

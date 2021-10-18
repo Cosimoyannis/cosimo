@@ -14,7 +14,7 @@ public class Endpoints {
     public static final String LEISTUNGEN = "/leistungen";
     public static final String PRODUCT = "/product";
     public static final String TEST = "/test";
-
+    public static final String NAVTEST = "/navtest";
 
 
 

@@ -4,7 +4,9 @@ body {
   color: #000000;
 }
 
-
+.midFooter {
+  text-align: center;
+}
 
 .arrowOne{
   display: flex;
@@ -42,6 +44,8 @@ body {
   overflow: hidden;
   transition: 0.5s;
 }
+
+
 
 .loggo {
   background-image:url("/subbyblack.png") !important;
@@ -177,5 +181,12 @@ body {
 @media only screen and (min-width: 1920px) {
   .parallax-container {
     height: 1080px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .arrowOne {
+    display: none;
   }
 }

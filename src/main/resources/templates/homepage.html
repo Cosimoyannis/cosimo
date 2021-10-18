@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="generator" content="Hugo 0.82.0">
         <title>Subby</title>
 
@@ -25,26 +26,33 @@
 
 
 
-<div1 class="navbar1 bg-white fixed-top">
-
-    <a href="/">
-        <img class="logo1"
-             src="bilder/subbyblack2.png"
-             id="myImage">
-    </a>
-
-    <nav1>
-        <ul1 id="menulist">
-            <li1><a href="/test" class="link-dark">Leistungen</a></li1>
-            <li1><a href="#" class="link-dark">Projekte</a></li1>
-            <li1><a href="#" class="link-dark">Über uns</a></li1>
-        </ul1>
-    </nav1>
-
-    <img src="bilder/list.png" id="myImageOne" class="menu-icon1" onclick="togglemenu()">
-
-</div1>
-
+<header class="header">
+    <nav class="navbar fixed-top bg-white">
+        <a href="/" class="nav-logo">
+            <img class="logo1"
+                 src="bilder/subbyblack2.png"
+                 id="myImage"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/test" class="nav-link">Leistungen</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar" id="burgerone"></span>
+            <span class="bar" id="burgertwo"></span>
+            <span class="bar" id="burgerthree"></span>
+        </div>
+    </nav>
+</header>
 
 
 
@@ -183,9 +191,8 @@
 
 
     <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; CosimoYannis 2021 &middot; <a href="https://www.htw-berlin.de/">Impressum</a> &middot; <a href="https://wi-bachelor.htw-berlin.de/">AGB</a>&middot; <a href="/products">Datenschutz</a>&middot; <a href="/button">Kontakt</a></p>
+    <footer>
+        <p class="midFooter"> &copy; <a> CosimoYannis 2021 </a> <br> &middot; <br> <a href="https://www.htw-berlin.de/">Impressum</a> <br> &middot; <br> <a href="https://wi-bachelor.htw-berlin.de/">AGB</a> <br> &middot; <br> <a href="/products">Datenschutz</a> <br> &middot; <br> <a href="/button">Kontakt</a></p>
     </footer>
 </main>
 
@@ -243,6 +250,23 @@
 
 
 
+<script>const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
 
 
 

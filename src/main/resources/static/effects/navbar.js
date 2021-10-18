@@ -1,6 +1,6 @@
 /* Navbar wird schwarz */
     $(window).scroll(function(){
-    $('div1').toggleClass('scrolled', $(this).scrollTop() > 10);
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 10);
 });
 
 
@@ -8,7 +8,9 @@
     $('a').toggleClass('scrolled', $(this).scrollTop() > 10);
 });
 
-
+$(window).scroll(function(){
+    $('span').toggleClass('scrolled', $(this).scrollTop() > 10);
+});
 
 
 
@@ -16,6 +18,7 @@
         window.onscroll = function () {
         scrollFunction();
         scrollFunctionOne();
+
     };
 
         function scrollFunction() {
@@ -36,16 +39,17 @@
 
 
 
- /* Handymenu */
-        var menulist = document.getElementById("menulist");
 
-        menulist.style.maxHeight = "0px";
 
-        function  togglemenu() {
-        if(menulist.style.maxHeight == "0px")
-    {
-        menulist.style.maxHeight = "280px"
-    }
-        else menulist.style.maxHeight = "0px"
-    }
+
+
+
+
+
+
+
+
+
+
+
 
