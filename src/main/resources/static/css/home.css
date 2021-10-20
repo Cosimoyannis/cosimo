@@ -87,7 +87,7 @@ li {
     color: #000000;
     font-family: var(--bs-font-sans-serif) !important;
     letter-spacing: 1px !important;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav-link.scrolled {
