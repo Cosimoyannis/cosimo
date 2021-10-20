@@ -38,9 +38,12 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     padding: 0px;
     width: 100%;
+    height: 80px;
     alignment: center;
+
 }
 
 .hamburger {
@@ -87,7 +90,7 @@ li {
     color: #000000;
     font-family: var(--bs-font-sans-serif) !important;
     letter-spacing: 1px !important;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .nav-link.scrolled {
