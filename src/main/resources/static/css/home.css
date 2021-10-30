@@ -3,6 +3,7 @@
 
 section {
     height: 100vh;
+    width: 100vw;
     scroll-snap-align: start;
 }
 
@@ -344,7 +345,7 @@ li {
     .thisone {
         display: grid;
         justify-content: center;
-        height: 80vh;
+        height: 70vh;
         width: 100vw;
     }
 
@@ -352,10 +353,17 @@ li {
         display: none;
     }
 
+    .thisoneThree {
+        display: grid;
+        justify-content: center;
+        height: 70vh;
+        width: 100vw;
+    }
+
     .thatone {
         display: grid;
         justify-content: center;
-        height: 80vh;
+        height: 70vh;
         width: 100vw;
     }
 
@@ -363,6 +371,7 @@ li {
         align-items: baseline;
         justify-content: center;
         alignment: bottom;
+        margin-bottom: 500vh;
     }
 
     .allcon {
@@ -380,14 +389,15 @@ li {
     }
 
     .imgtwo {
-        height: 58vh;
+        height: 40vh;
         margin-top: -10vh;
-        margin-left: 0vh;
+        justify-content: right;
+        justify-items: right;
         z-index: 1;
     }
 
     .imgthree {
-        height: 45vh;
+        height: 35vh;
         margin-top: 10vh;
         margin-left: 0vh;
 
@@ -409,12 +419,12 @@ li {
     .textoneone {
         margin-top: 12vh;
         margin-left: 5vw;
-        font-size: 40pt;
+        font-size: 30pt;
         font-family: "Helvetica Neue";
         font-weight: bold;
         color: #5a6268;
         text-decoration: none;
-        line-height: 60px;
+        line-height: 40px;
         text-align: left;
         display: block;
         z-index: 2;
@@ -436,12 +446,12 @@ li {
     .textthree {
         margin-top: 4vh;
         margin-right: 0vh;
-        font-size: 30pt;
+        font-size: 25pt;
         font-family: "Helvetica Neue";
         font-weight: bold;
         color: #5a6268;
         text-decoration: none;
-        line-height: 45px;
+        line-height: 40px;
         text-align: center;
     }
 
