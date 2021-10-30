@@ -1,12 +1,238 @@
 .container {
 }
 
-a {
-    line-height: 80px;
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.thisone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.thisoneTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.thatone {
+    display: none;
+}
+
+.derbutton {
+    align-items: baseline;
+    justify-content: center;
+    alignment: bottom;
+}
+
+.allcon {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.imgone  {
+    height: 40vh;
+    margin-top: 100px;
+}
+
+.imgtwo  {
+    height: 40vh;
+    margin-top: 100px;
+}
+
+.imgthree  {
+    height: 40vh;
+    margin-top: 100px;
+}
+
+.textone {
+    margin-top: 100px;
+    margin-right: 200px;
+    font-size: 40pt;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: #5a6268;
+    text-decoration: none;
+    line-height: 60px;
+
+}
+
+.texttwo {
+    margin-top: 100px;
+    margin-right: 200px;
+    font-size: 40pt;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: #5a6268;
+    text-decoration: none;
+    line-height: 60px;
+
+}
+
+.textthree {
+    margin-top: 100px;
+    margin-right: 200px;
+    font-size: 40pt;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: #5a6268;
+    text-decoration: none;
+    line-height: 60px;
+
+}
+
+.textoneone {
+    display: none;
+}
+
+.one {
+    background: white;
+}
+
+.two {
+    background: white;
+}
+
+.three {
+    background: white;
+}
+
+.four {
+    background: white;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333;
+    font-family: "Helvetica Neue";
+}
+
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.blob-btn {
+    z-index: 1;
+    position: relative;
+    padding: 10px 46px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #b0b6ba;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.blob-btn:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #b0b6ba;
+    border-radius: 30px;
+}
+.blob-btn:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+}
+.blob-btn:hover {
+    color: #ffffff;
+    border-radius: 30px;
+}
+.blob-btn:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+.blob-btn__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+}
+.blob-btn__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+}
+.blob-btn__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: #b0b6ba;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+    .blob-btn__blob {
+        transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+}
+.blob-btn__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+    .blob-btn:hover .blob-btn__blob {
+        transform: translateZ(0) scale(1.4);
+    }
 }
 
 .logo1{
-    width: 150px;
+    width: 120px;
     cursor: pointer;
     margin: 30px 0;
     margin-left: 80px;
@@ -90,7 +316,7 @@ li {
     color: #000000;
     font-family: var(--bs-font-sans-serif) !important;
     letter-spacing: 1px !important;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .nav-link.scrolled {
@@ -108,6 +334,125 @@ li {
 }
 
 @media only screen and (max-width: 900px) {
+
+
+    section {
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+
+    .thisone {
+        display: grid;
+        justify-content: center;
+        height: 80vh;
+        width: 100vw;
+    }
+
+    .thisoneTwo {
+        display: none;
+    }
+
+    .thatone {
+        display: grid;
+        justify-content: center;
+        height: 80vh;
+        width: 100vw;
+    }
+
+    .derbutton {
+        align-items: baseline;
+        justify-content: center;
+        alignment: bottom;
+    }
+
+    .allcon {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    .imgone  {
+        height: 35vh;
+        margin-top: -10vh;
+        transform: scaleX(-1);
+        margin-left: 20vh;
+        z-index: 1;
+    }
+
+    .imgtwo {
+        height: 58vh;
+        margin-top: -10vh;
+        margin-left: 0vh;
+        z-index: 1;
+    }
+
+    .imgthree {
+        height: 45vh;
+        margin-top: 10vh;
+        margin-left: 0vh;
+
+    }
+
+    .textone {
+        margin-top: 15vh;
+        margin-right: 10vh;
+        font-size: 20pt;
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: #5a6268;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: center;
+        display: none;
+    }
+
+    .textoneone {
+        margin-top: 12vh;
+        margin-left: 5vw;
+        font-size: 40pt;
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: #5a6268;
+        text-decoration: none;
+        line-height: 60px;
+        text-align: left;
+        display: block;
+        z-index: 2;
+    }
+
+    .texttwo {
+        margin-top: 15vh;
+        margin-right: 0vh;
+        font-size: 30pt;
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: #5a6268;
+        text-decoration: none;
+        line-height: 45px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .textthree {
+        margin-top: 4vh;
+        margin-right: 0vh;
+        font-size: 30pt;
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: #5a6268;
+        text-decoration: none;
+        line-height: 45px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
 
 
     .nav-menu {
