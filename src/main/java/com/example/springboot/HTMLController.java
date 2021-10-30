@@ -22,10 +22,7 @@ public class HTMLController {
         return "homepage";
     }
 
-    @GetMapping(path = Endpoints.HOME)
-    public String home() {
-        return "home";
-    }
+
 
     @GetMapping(path = Endpoints.BUTTON)
     public String button() {
@@ -40,7 +37,7 @@ public class HTMLController {
     public String product() {return "product";}
 
     @GetMapping(path = Endpoints.TEST)
-    public String test() {return "test";}
+    public String test() {return "test2";}
 
     @GetMapping(path = Endpoints.NAVTEST)
     public String navtest() {return "navtest";}
