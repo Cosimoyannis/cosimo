@@ -14,6 +14,14 @@ section {
     height: 80vh;
 }
 
+.thisoneFive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
 .thisoneTwo {
     display: flex;
     justify-content: center;
@@ -55,8 +63,18 @@ section {
 }
 
 .imgthree  {
-    height: 40vh;
+    height: 50vh;
     margin-top: 100px;
+}
+
+.imgthreeFive  {
+    height: 60vh;
+    margin-top: 100px;
+    margin-left: 20vh;
+}
+
+.imgFive  {
+    display: none;
 }
 
 .textone {
@@ -95,6 +113,19 @@ section {
 
 }
 
+.textfive{
+    margin-top: 100px;
+    margin-right: 20vh;
+    font-size: 40pt;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+
+
 .textoneone {
     display: none;
 }
@@ -112,6 +143,10 @@ section {
 }
 
 .four {
+    background: white;
+}
+
+.five {
     background: white;
 }
 
@@ -322,7 +357,7 @@ li {
 .nav-link{
     font-weight: 400;
     color: #000000;
-    font-family: var(--bs-font-sans-serif) !important;
+    font-family: "Helvetica Neue" !important;
     letter-spacing: 1px !important;
     font-size: 17px;
 }
@@ -374,12 +409,23 @@ li {
         width: 100vw;
     }
 
+    .thisoneFive {
+        display: grid;
+        justify-content: center;
+        height: 70vh;
+        width: 100vw;
+    }
+
+
+
     .derbutton {
         align-items: baseline;
         justify-content: center;
         alignment: bottom;
         margin-bottom: 500vh;
     }
+
+
 
     .allcon {
         scroll-snap-type: y mandatory;
@@ -407,6 +453,15 @@ li {
         height: 35vh;
         margin-top: 10vh;
         margin-left: 0vh;
+
+    }
+
+    .imgFive {
+        height: 35vh;
+        margin-top: 20vh;
+        margin-left: 1vh;
+        display: flex;
+
 
     }
 
@@ -462,6 +517,18 @@ li {
         text-align: center;
     }
 
+    .textfive {
+        margin-top: 4vh;
+        margin-right: 0vh;
+        font-size: 25pt;
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: #5a6268;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: center;
+    }
+
 
 
 
@@ -476,7 +543,7 @@ li {
         position: fixed;
         left: -100%;
         top: 70px;
-        height: 400px;
+        height: 80vh;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
