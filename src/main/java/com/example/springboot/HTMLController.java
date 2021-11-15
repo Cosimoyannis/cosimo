@@ -22,7 +22,10 @@ public class HTMLController {
         return "homepage";
     }
 
-
+    @GetMapping(path = Endpoints.SPEISEKARTE)
+    public String speisekarte() {
+        return "speisekarte";
+    }
 
     @GetMapping(path = Endpoints.BUTTON)
     public String button() {
